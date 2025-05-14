@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             } else if (password != confirmPassword) {
                 Toast.makeText(this, "Password tidak sama", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Register berhasil", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Registrasi berhasil", Toast.LENGTH_SHORT).show()
 
                 binding.editTextFullname.text.clear()
                 binding.editTextUsername.text.clear()
