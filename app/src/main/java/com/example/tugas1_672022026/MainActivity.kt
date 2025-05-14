@@ -31,9 +31,13 @@ class MainActivity : AppCompatActivity() {
 
             if (fullname.isEmpty() || username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
                 Toast.makeText(this, "Tolong isi semua form", Toast.LENGTH_SHORT).show()
+            } else if (fullname.any { it.isDigit() }) {
+                Toast.makeText(this, "Nama lengkap tidak boleh mengandung angka", Toast.LENGTH_SHORT).show()
+            } else if (username.any { it.isDigit() }) {
+                Toast.makeText(this, "Username tidak boleh mengandung angka", Toast.LENGTH_SHORT).show()
             } else if (password != confirmPassword) {
                 Toast.makeText(this, "Password tidak sama", Toast.LENGTH_SHORT).show()
-            }else {
+            } else {
                 Toast.makeText(this, "Register berhasil", Toast.LENGTH_SHORT).show()
 
                 binding.editTextFullname.text.clear()
